@@ -1,0 +1,11 @@
+<div class="ParentPlace">
+    <img src="../../assets/Images/ChildNode.png" />
+    <span *ngIf="data.children" (click)="folderClicked(data)">{{data.name}}</span>
+    <a *ngIf="!data.children" (click)="readFile(data)">{{data.name}}</a>
+
+</div>
+<ul *ngIf="data.children && data.children.length > 0">
+    <li *ngFor="let child of data.children">
+        <tree-item [data]="child"></tree-item>
+    </li>
+</ul>

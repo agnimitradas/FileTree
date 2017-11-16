@@ -1,0 +1,17 @@
+<!--INPUT START-->
+<div class="pull-right" *ngIf="!searchViewFlag"><button class="btn" (click)="backtoSearch()">Search Again</button></div>
+<div class="row form-group" *ngIf="searchViewFlag">
+    <div class="col-md-8">
+        <input type="text" class="form-control" id="filePath" placeholder="Enter The complete file Path" [(ngModel)]="formsInput.path">
+    </div>
+    <div class="col-md-4">
+        <button class="btn" (click)="viewResult()">View</button>
+    </div>
+</div>
+<!--INPUT END-->
+
+<!--FILE TREE START-->
+<div class="TreeContainer" *ngIf="!searchViewFlag">
+    <tree-item [data]="allFilesData"></tree-item>
+</div>
+<!--FILE TREE END-->

@@ -1,0 +1,17 @@
+input {
+    width: 50%;
+    float: right;
+}
+
+.row {
+    margin-top: 10%;
+}
+
+button {
+    float: left;
+}
+
+.TreeContainer {
+    border: solid 0px red;
+    padding: 10px;
+}
